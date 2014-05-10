@@ -11,7 +11,7 @@ data$date <- as.Date(data$date)
 ```{r fig.width=7, fig.height=6}
 stepsPerDay <- aggregate(data$steps, list(day=data$date), sum, na.rm=TRUE)
 colnames(stepsPerDay) <- c("day", "steps")
-hist(stepsPerDay$steps, col="red", xlab="Totl steps per day", main = "Histogram - total steps per day")
+hist(stepsPerDay$steps, col="red", xlab="Total steps per day", main = "Histogram - total steps per day")
 meanStepsPerDay <- mean(stepsPerDay$steps)
 medianStepsPerDay <- median(stepsPerDay$steps)
 ```

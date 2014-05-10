@@ -14,7 +14,7 @@ data$date <- as.Date(data$date)
 ```r
 stepsPerDay <- aggregate(data$steps, list(day = data$date), sum, na.rm = TRUE)
 colnames(stepsPerDay) <- c("day", "steps")
-hist(stepsPerDay$steps, col = "red", xlab = "Totl steps per day", main = "Histogram - total steps per day")
+hist(stepsPerDay$steps, col = "red", xlab = "Total steps per day", main = "Histogram - total steps per day")
 ```
 
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
